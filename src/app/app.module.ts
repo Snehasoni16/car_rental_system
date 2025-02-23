@@ -15,14 +15,8 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 //add
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { NgZorroImpotsModule } from './NgZorroImportsModule';
 
-//NG ZORRO IMPORTS
-import { NzSpinModule } from 'ng-zorro-antd/spin';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { FormGroup, FormControl } from '@angular/forms';
 
 
 registerLocaleData(en);
@@ -40,12 +34,7 @@ registerLocaleData(en);
     HttpClientModule,
    // BrowserAnimationsModule,
     ReactiveFormsModule,
-    //NG Zorro Imports
-    NzSpinModule,
-    NzFormModule,
-    NzButtonModule,
-    NzInputModule,
-    NzLayoutModule
+   NgZorroImpotsModule
 
   ],
 

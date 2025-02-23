@@ -22,7 +22,7 @@
                 </nz-input-group>
               </nz-form-control>
             </nz-form-item>
-            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="login()">
+            <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="login()" [disabled]="loginForm.invalid">
               Log in
             </button>
             or <a routerLink="/register">register now!</a>
