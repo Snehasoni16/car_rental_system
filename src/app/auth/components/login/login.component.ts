@@ -16,7 +16,9 @@ throw new Error('Method not implemented.');
 }
 isSpinning : boolean=false;
 loginForm!:FormGroup;
-constructor(private fb:FormBuilder){}
+constructor(private fb:FormBuilder
+  ,private authService: AuthService
+){}
 ngOnInit(){
   this.loginForm=this.fb.group({
    email:[null,[Validators.email,Validators.required]],
@@ -25,6 +27,9 @@ ngOnInit(){
 }
 login(){
   console.log(this.loginForm.value);
+  this.authService.login(this.loginForm.value).subscribe((res)=>{
+    console.log(res);
+  })
 }
 }
 
