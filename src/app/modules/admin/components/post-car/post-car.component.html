@@ -64,7 +64,7 @@
                         <div nz-col nzSpan="24">
                             <nz-form-item>
                                 <nz-form-control nzErrorTip="This Input Is Required!">
-                                    <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Color" formArrayName="color">
+                                    <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Color" formControlName="color">
                                         <nz-option *ngFor="let color of listOfColor" [nzLabel]="color" [nzValue]="color">
                                         </nz-option>
                                     </nz-select>
@@ -78,14 +78,21 @@
                                 </nz-form-control>
                             </nz-form-item>
                         </div>
-                        <div nz-col nzSpan="24">
+                        <!-- <div nz-col nzSpan="24">
                             <nz-form-item>
                               <nz-form-control nzHasFeedback [nzXs]="24" [nzErrorTip]="'Input is required!'">
                                 <input nz-input nzPlaceholder="Price" formControlName="price" />
                               </nz-form-control>
                             </nz-form-item>
-                          </div>
-                          
+                          </div> -->
+                                              <!-- Price Input -->
+                    <div nz-col nzSpan="24">
+                        <nz-form-item>
+                            <nz-form-control nzHasFeedback nzErrorTip="This Input Is Required!">
+                                <input nz-input placeholder="Price" formControlName="price" />
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
                           
                         <div nz-col nzSpan="24">
                             <nz-form-item>
