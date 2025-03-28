@@ -3,7 +3,7 @@ import { AdminService } from '../../services/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzMessageComponent, NzMessageService } from 'ng-zorro-antd/message';
-
+import { HttpHeaders } from '@angular/common/http';
 @Component({
   selector: 'app-update-car',
   standalone: false,

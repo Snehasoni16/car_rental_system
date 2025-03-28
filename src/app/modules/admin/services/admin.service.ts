@@ -43,6 +43,11 @@ export class AdminService {
    headers:this.createAuthorizationHeader()
     });
   }
+  // updateCar( carId:number,carDto:any):Observable<any>{
+  //   return this.http.put(BASIC_URL + "/api/admin/car/"+ carId, carDto,{
+  //   headers:this.createAuthorizationHeader()
+  //   });
+  // }
   updateCar( carId:number,carDto:any):Observable<any>{
     return this.http.put(BASIC_URL + "/api/admin/car/"+ carId, carDto,{
     headers:this.createAuthorizationHeader()
@@ -56,5 +61,6 @@ createAuthorizationHeader(): HttpHeaders{
     'Bearer ' + StorageService.getToken()
   );
 }
+
 
 }
