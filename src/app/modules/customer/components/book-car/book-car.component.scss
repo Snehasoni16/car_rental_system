@@ -1,0 +1,213 @@
+/* General Container Styles */
+.child {
+    padding: 20px;
+    width: 780px;
+    background-color: white;
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 30px;
+    width: 780px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px auto 0;
+}
+
+/* Typography */
+h2:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 0em;
+}
+
+h5 {
+    font-size: 14px;
+    color: #141a33;
+    margin-bottom: 10px;
+}
+
+i {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.filterBtn {
+    width: 207px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.outline-button {
+    font-weight: 500;
+    font-size: 14px;
+    color: #141a33;
+    border: 2px solid #001529;
+    min-width: 221px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+/* Forms & Filters */
+.firstFilterInput {
+    min-width: 260px;
+}
+
+.filter-grid {
+    background: white;
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.filter-fields-width {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-fields-width .ant-select,
+.filter-fields-width .ant-input {
+    min-width: 260px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Profile & Images */
+.docDp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.docDp img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 5px solid #001529;
+}
+
+/* Layout Adjustments */
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inner-content {
+    padding: 32px;
+    background-color: #F8F8F8;
+    padding-bottom: 60px;
+    min-height: 91vh;
+}
+
+/* Pagination */
+.pagination {
+    width: 780px;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+
+/* Sidebar & Dashboard */
+.ant-layout.dashboard-layout {
+    min-height: calc(100vh - 115px);
+}
+
+.sider-content-wrapper.ant-layout-content {
+    max-height: calc(100vh - 115px);
+    overflow-y: auto;
+}
+
+/* Level Section */
+.level {
+    background-color: #001529;
+    padding: 10px;
+}
+
+.level h5 {
+    color: white;
+}
+
+/* Filters Category */
+.filters-category {
+    margin-bottom: 57px;
+}
+
+.filters-category .filter-badge {
+    background: white;
+    box-shadow: 1px 1px 30px -7px rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
+    min-width: 111px;
+    height: 30px;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.filters-category p {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.filters-category i {
+    font-size: 10px;
+}
+
+/* Expanding Action Buttons */
+.expand-actions-grid .ant-btn-primary {
+    background: white;
+    border: 0.5px solid #141a33;
+    border-radius: 3px;
+    min-width: 100px;
+    height: 25px;
+    font-weight: 500;
+    font-size: 10px;
+    color: #ff7800;
+}
+
+/* Document Information */
+.docInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.docInfo h3 {
+    padding-top: 8px;
+}
+
+.color-gray div h5 {
+    color: gray;
+    margin-top: -5px;
+}
+
+.docDes {
+    margin-top: 10px;
+}
+
+/* Span Color */
+span {
+    color: gray;
+}

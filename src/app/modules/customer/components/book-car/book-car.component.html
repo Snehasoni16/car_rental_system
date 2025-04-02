@@ -1,1 +1,66 @@
-<p>book-car works!</p>
+<div class="car-container" *ngIf="car">
+    <div class="car-details">
+        <div nz-row>
+            <!-- Image Section -->
+            <div nz-col nzSpan="8">
+                <img class="profile-img" [src]="processedImage" alt="profile" />
+            </div>
+
+            <!-- Car Details Section -->
+            <div nz-col nzSpan="16">
+                <h2 class="car-title">{{ car.brand }} - {{ car.name }}</h2>
+                <p>{{ car.description }}</p>
+                <hr />
+                <h5>
+                    Price: <b>${{ car.price }}</b> -
+                    Color: <b>{{ car.color }}</b> -
+                    Transmission: <b>{{ car.transmission }}</b> -
+                    Type: <b>{{ car.type }}</b> -
+                    Year: <b>{{ car.year | date: 'yyyy' }}</b>
+                </h5>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working..." class="spinner-container">
+        <div class="dashboard-filter">
+            <form [formGroup]="validateForm">
+                <div class="filter-grid">
+                    <!-- From Date -->
+                    <nz-form-item>
+                        <nz-form-label nzFor="fromDate">From Date</nz-form-label>
+                        <nz-form-control>
+                            <nz-date-picker
+                                formControlName="fromDate"
+                                nzPlaceHolder="From Date"
+                                [nzFormat]="dateFormat"
+                                id="fromDate">
+                            </nz-date-picker>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- To Date -->
+                    <nz-form-item>
+                        <nz-form-label nzFor="toDate">To Date</nz-form-label>
+                        <nz-form-control>
+                            <nz-date-picker
+                                formControlName="toDate"
+                                nzPlaceHolder="To Date"
+                                [nzFormat]="dateFormat"
+                                id="toDate">
+                            </nz-date-picker>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Book Car Button -->
+                    <div class="button-container">
+                        <button nz-button nzType="primary" (click)="bookACar(validateForm.value)">
+                            Book Car
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nz-spin>
+</div>

@@ -18,10 +18,25 @@ export class CustomerService {
       'Content-Type': 'application/json'
     });
 
-    // ✅ Return the HTTP GET request
     return this.http.get(BASIC_URL + "/api/customer/cars", { headers });
   }
+  getCarById(carId:number): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('token'), // 👈 Use stored token
+      'Content-Type': 'application/json'
+    });
 
+    return this.http.get(BASIC_URL + "/api/customer/car/"+carId , { headers });
+  }
+
+  bookACar(bookACarDto:any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('token'), // 👈 Use stored token
+      'Content-Type': 'application/json'
+    });
+
+    return this.http.post(BASIC_URL + "/api/customer/car/book"+bookACarDto , { headers });
+  }
   createAuthorizationHeader(): HttpHeaders {
     let authHeaders: HttpHeaders = new HttpHeaders();
     return authHeaders.set(
